@@ -7,7 +7,7 @@
  *
  *  @author Lukino
  *  @link https://jen-tak.tk/
- *  @version 1.0
+ *  @version 1.1
  *  @filesource
  */
 class pluginSecurityHeaders extends Plugin {
@@ -193,7 +193,7 @@ class pluginSecurityHeaders extends Plugin {
         $html .= '</div>';
 
         $html .= '<p class="clearfix mt-5 mb-5">&nbsp;</p>';
-        $html .= '<div class="modal fade" id="donateModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">' . $L->get('sh-donate-title') . '</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p><img src="' . DOMAIN_PLUGINS . 'security-headers/img/qr.png" alt="" class="mx-auto d-block img-fluid" /></p><p><br>' . $L->get('sh-donate-text') . '</p><p>BTC: <code><a href="bitcoin:39xYc2jxrxFMiWgWDw7RYUmyF7vF331QWX">39xYc2jxrxFMiWgWDw7RYUmyF7vF331QWX</a></code></p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">' . $L->get('sh-close') . '</button></div></div></div></div>';
+        $html .= '<div class="modal fade" id="donateModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">' . $L->get('sh-donate-title') . '</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p><img src="' . DOMAIN_PLUGINS . basename( __DIR__ ) . '/img/qr.png" alt="" class="mx-auto d-block img-fluid" /></p><p><br>' . $L->get('sh-donate-text') . '</p><p>BTC: <code><a href="bitcoin:39xYc2jxrxFMiWgWDw7RYUmyF7vF331QWX">39xYc2jxrxFMiWgWDw7RYUmyF7vF331QWX</a></code></p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">' . $L->get('sh-close') . '</button></div></div></div></div>';
 
         // compress output
         return trim( str_replace('    ', '', str_replace("\t", '', str_replace("\r\n", '', $html) ) ) );
